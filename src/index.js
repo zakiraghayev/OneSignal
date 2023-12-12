@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import OneSignal from 'onesignal-web-sdk';
+import OneSignal from 'react-onesignal';
 import { oneSignalConfig } from './OneSignalConfig';
 
 // Initialize OneSignal

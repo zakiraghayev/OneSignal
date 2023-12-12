@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import OneSignal from 'onesignal-web-sdk';
+import OneSignal from 'react-onesignal';
 
 function App() {
     const subscribeToNotifications = () => {
-        OneSignal.showNativePrompt();
+        OneSignal.Slidedown.promptPush();
     };
 
     return (

@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import OneSignal from 'onesignal-web-sdk';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const subscribeToNotifications = () => {
+        OneSignal.showNativePrompt();
+    };
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <p>Click the button to subscribe to notifications.</p>
+                <button onClick={subscribeToNotifications}>Subscribe</button>
+            </header>
+        </div>
+    );
 }
 
 export default App;
